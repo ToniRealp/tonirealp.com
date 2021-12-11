@@ -1,7 +1,16 @@
 import type { NextPage } from "next";
+import Navbar from "../components/navbar";
+import About from "../components/about";
+import Projects from "../components/projects";
 
-const Home: NextPage = () => {
-    return <h1 className="text-3xl"> Toni Realp </h1>;
+const HomePage: NextPage = () => {
+    return (
+        <div>
+            <Navbar />
+            <About />
+            <Projects />
+        </div>
+    );
 };
 
-export default Home;
+export default HomePage;
