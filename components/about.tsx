@@ -15,7 +15,7 @@ const About: NextPage = () => {
                         {" "}
                         Software engineer, full-stack developer{" "}
                     </p>
-                    <p className="mt-4 text-gray-600 mt-8">
+                    <p className="mt-4 text-gray-600 mt-8 text-justify">
                         {" "}
                         I am Toni currently a software engineer student and freelancer full-stack developer. During my
                         years of experience, I've worked in many different fields ranging from videogame development to
