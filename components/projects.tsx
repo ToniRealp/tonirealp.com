@@ -2,81 +2,32 @@ import { NextPage } from "next";
 
 const posts = [
     {
-        title: "Boost your conversion rate",
-        href: "#",
-        category: { name: "Article", href: "#" },
+        title: "Pocket Todo: An everyday simple todo app",
+        href: "https://play.google.com/store/apps/details?id=com.pocket.todo",
+        category: { name: "App", href: "#" },
         description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
-        date: "Mar 16, 2020",
-        datetime: "2020-03-16",
-        imageUrl:
-            "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
-        readingTime: "6 min",
-        author: {
-            name: "Roel Aufderehar",
-            href: "#",
-            imageUrl:
-                "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-        },
+            "To-do list app that actually makes you productive. Built with with a couple of friends with technologies like React, Capacitor and Firebase, were I took part as a full-stack developer",
+        imageUrl: "/pocket-todo.png",
     },
     {
-        title: "How to use search engine optimization to drive sales",
-        href: "#",
-        category: { name: "Video", href: "#" },
-        description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.",
-        date: "Mar 10, 2020",
-        datetime: "2020-03-10",
-        imageUrl:
-            "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
-        readingTime: "4 min",
-        author: {
-            name: "Brenna Goyette",
-            href: "#",
-            imageUrl:
-                "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-        },
+        title: "Hidreco",
+        href: "https://www.hidreco.es/",
+        category: { name: "Landing page", href: "#" },
+        description: "Landing page for a water purification company from Valencia built with next.js and tailwind.",
+        imageUrl: "/hidreco.png",
     },
     {
-        title: "Improve your customer experience",
-        href: "#",
-        category: { name: "Case Study", href: "#" },
+        title: "Sons of God: Redemption",
+        href: "https://tonirealp.itch.io/sons-of-god-redemption",
+        category: { name: "3D videogame", href: "#" },
         description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.",
-        date: "Feb 12, 2020",
-        datetime: "2020-02-12",
-        imageUrl:
-            "https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
-        readingTime: "11 min",
-        author: {
-            name: "Daniela Metz",
-            href: "#",
-            imageUrl:
-                "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-        },
-    },
-    {
-        title: "Improve your customer experience",
-        href: "#",
-        category: { name: "Case Study", href: "#" },
-        description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.",
-        date: "Feb 12, 2020",
-        datetime: "2020-02-12",
-        imageUrl:
-            "https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
-        readingTime: "11 min",
-        author: {
-            name: "Daniela Metz",
-            href: "#",
-            imageUrl:
-                "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-        },
+            "3D action videogame developed in my second year of university at ENTI, this project was developed with unity in a team of 4, where I took part as project manager and CTO.",
+        imageUrl: "/sons-of-god.png",
     },
 ];
 
 const Projects: NextPage = () => (
-    <div className="relative pb-20 px-4 sm:px-6 lg:pb-28 lg:px-8 lg:mt-8">
+    <div id="projects" className="relative pb-20 px-4 sm:px-6 lg:pb-28 lg:px-8 lg:mt-8">
         <div className="absolute inset-0">
             <div className=" h-1/3 sm:h-2/3" />
         </div>
@@ -84,8 +35,7 @@ const Projects: NextPage = () => (
             <div className="text-center">
                 <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">My projects</h2>
                 <p className="mt-3 mx-auto max-w-2xl text-xl text-gray-500 sm:mt-4">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus
-                    sed.
+                    Take a look at my projects. This is some of the work that I've been proud to take part in.
                 </p>
             </div>
             <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
@@ -105,26 +55,6 @@ const Projects: NextPage = () => (
                                     <p className="text-xl font-semibold text-gray-900">{post.title}</p>
                                     <p className="mt-3 text-base text-gray-500">{post.description}</p>
                                 </a>
-                            </div>
-                            <div className="mt-6 flex items-center">
-                                <div className="flex-shrink-0">
-                                    <a href={post.author.href}>
-                                        <span className="sr-only">{post.author.name}</span>
-                                        <img className="h-10 w-10 rounded-full" src={post.author.imageUrl} alt="" />
-                                    </a>
-                                </div>
-                                <div className="ml-3">
-                                    <p className="text-sm font-medium text-gray-900">
-                                        <a href={post.author.href} className="hover:underline">
-                                            {post.author.name}
-                                        </a>
-                                    </p>
-                                    <div className="flex space-x-1 text-sm text-gray-500">
-                                        <time dateTime={post.datetime}>{post.date}</time>
-                                        <span aria-hidden="true">&middot;</span>
-                                        <span>{post.readingTime} read</span>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
