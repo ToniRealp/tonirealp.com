@@ -30,7 +30,7 @@ const NavbarLink = ({ children, className, href }: NavbarLinkProps) => {
 
 export default function Navbar() {
     return (
-        <Disclosure as="nav" className="fixed top-0 left-0 z-50 w-full shadow-md bg-white">
+        <Disclosure as="nav" className="fixed top-0 left-0 z-50 w-full sm:shadow-md bg-white">
             {({ open }) => (
                 <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                     <div className="relative flex justify-between h-16">
@@ -47,7 +47,6 @@ export default function Navbar() {
                                         />
                                     </a>
                                 </Link>
-                                <p className="hidden lg:block lg:ml-8 h-8 w-auto text-2xl font-bold ml-4">Toni Realp</p>
                             </div>
                             <div className="hidden sm:ml-6 sm:flex sm:space-x-8 items-center">
                                 <NavbarLink href="/#products">About</NavbarLink>
@@ -61,7 +60,7 @@ export default function Navbar() {
                             </div>
                             <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
                                 {/* Mobile menu button */}
-                                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-500 hover:text-primary">
+                                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md hover:text-gray-500 hover:text-primary">
                                     <span className="sr-only">Open main menu</span>
                                     {open ? (
                                         <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -80,10 +79,10 @@ export default function Navbar() {
                         leaveFrom="transform scale-300 opacity-100"
                         leaveTo="transform scale-95 opacity-0"
                     >
-                        <Disclosure.Panel className="flex sm:hidden rounded-lg sm:w-56 bg-gray-900 w-full p-2">
+                        <Disclosure.Panel className="flex sm:hidden rounded-lg sm:w-56 bg-gray-50 border-2 w-full p-2">
                             <div className="space-y-1 w-full flex flex-col items-center justify-center sm:items-start sm:text-left">
-                                <NavbarLink href="/#products">Products</NavbarLink>
-                                <NavbarLink href="/#technologies">Technologies</NavbarLink>
+                                <NavbarLink href="/#products">About</NavbarLink>
+                                <NavbarLink href="/#technologies">My projects</NavbarLink>
                                 <NavbarLink href="/contact">Contact</NavbarLink>
                             </div>
                         </Disclosure.Panel>
