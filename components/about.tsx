@@ -4,12 +4,12 @@ import profilePicture from "../public/profile-picture.jpg";
 
 const About: NextPage = () => {
     return (
-        <div className="pt-32 mx-auto w-full max-w-7xl pb-20 px-4">
+        <div id="about" className="pt-32 mx-auto w-full max-w-7xl pb-20 px-4">
             <h1 className="text-5xl font-extrabold text-center">
                 Hi I'm <span className="text-primary">Toni Realp</span>
             </h1>
             <div className="flex flex-col justify-center items-center lg:justify-between lg:flex-row mx-auto mt-16">
-                <div className="max-w-md">
+                <div className="max-w-sm">
                     <Image src={profilePicture} className="rounded-md" />
                 </div>
                 <div className="lg:max-w-md xl:max-w-2xl mt-12">
