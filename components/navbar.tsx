@@ -49,13 +49,13 @@ export default function Navbar() {
                                 </Link>
                             </div>
                             <div className="hidden sm:ml-6 sm:flex sm:space-x-8 items-center">
-                                <NavbarLink href="/#products">About</NavbarLink>
-                                <NavbarLink href="/#technologies">My Projects</NavbarLink>
+                                <NavbarLink href="/#about">About</NavbarLink>
+                                <NavbarLink href="/#projects">My Projects</NavbarLink>
                                 <NavbarLink
-                                    href="/contact"
+                                    href="/curriculum.pdf"
                                     className="bg-primary rounded-lg w-24 text-white hover:bg-primary-500 hover:!border-none"
                                 >
-                                    Contact
+                                    My CV
                                 </NavbarLink>
                             </div>
                             <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
@@ -81,9 +81,9 @@ export default function Navbar() {
                     >
                         <Disclosure.Panel className="flex sm:hidden rounded-lg sm:w-56 bg-gray-50 border-2 w-full p-2">
                             <div className="space-y-1 w-full flex flex-col items-center justify-center sm:items-start sm:text-left">
-                                <NavbarLink href="/#products">About</NavbarLink>
-                                <NavbarLink href="/#technologies">My projects</NavbarLink>
-                                <NavbarLink href="/contact">Contact</NavbarLink>
+                                <NavbarLink href="/#about">About</NavbarLink>
+                                <NavbarLink href="/#projects">My projects</NavbarLink>
+                                <NavbarLink href="/curriculum.pdf">My CV</NavbarLink>
                             </div>
                         </Disclosure.Panel>
                     </Transition>
