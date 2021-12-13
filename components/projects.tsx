@@ -6,8 +6,25 @@ const posts = [
         href: "https://play.google.com/store/apps/details?id=com.pocket.todo",
         category: { name: "App", href: "#" },
         description:
-            "To-do list app that actually makes you productive. Built with with a couple of friends with technologies like React, Capacitor and Firebase, were I took part as a full-stack developer",
+            "To-do list app that actually makes you productive. Built with with a couple of friends with technologies like React, Capacitor and Firebase, were I took part as a full-stack developer.",
         imageUrl: "/pocket-todo.png",
+    },
+    {
+        title: "Jobeed",
+        href: "https://jobeed.herokuapp.com/home",
+        category: { name: "Full-stack app", href: "#" },
+        description:
+            "Jobeed was conceived as a Twitter-like app for job purposes, this app was developed with apache Velocity. This is one of my most interesting projects due to the nature of the backend " +
+            "we developed the project using Domain Driven Design and hexagonal architecture being one of my best works.",
+        imageUrl: "/jobeed.png",
+    },
+    {
+        title: "Cloudflare showcase",
+        href: "https://pages-c4h.pages.dev/",
+        category: { name: "Full-stack app", href: "#" },
+        description:
+            "This project was developed for the cloudflare general assignment. It tries to showcase cloudflare workers. The project has two parts, front-end built with react.js and fancy data fetching (SWR), and the backend API built with the Worktop framework.",
+        imageUrl: "/cloudflare-assignment.png",
     },
     {
         title: "Hidreco",
@@ -21,8 +38,24 @@ const posts = [
         href: "https://tonirealp.itch.io/sons-of-god-redemption",
         category: { name: "3D videogame", href: "#" },
         description:
-            "3D action videogame developed in my second year of university at ENTI, this project was developed with unity in a team of 4, where I took part as project manager and CTO.",
+            "3D action videogame developed in my second year of university at ENTI, this project was developed with Unity in a team of 4, where I took part as project manager and developer.",
         imageUrl: "/sons-of-god.png",
+    },
+    {
+        title: "Mini 2D game engine",
+        href: "https://github.com/ToniRealp/2D-game-engine",
+        category: { name: "2D videogame", href: "#" },
+        description:
+            "This is a simple 2D game engine with a curious version of arkanoid built inside. The idea behind this project was to showcase object oriented desing plus MVC architecture. It was built with C++ and SDL",
+        imageUrl: "/2D-game-engine.png",
+    },
+    {
+        title: "Jueguito the game",
+        href: "https://kubitstudios.itch.io/jueguito-the-game",
+        category: { name: "2D videogame", href: "#" },
+        description:
+            "2D brawler developed for my first year of university at ENTI, this project won the award as the best game in the promotion, it was developed with Unity in a team of 3.",
+        imageUrl: "/jueguito-the-game.png",
     },
 ];
 

@@ -12,7 +12,7 @@ const About: NextPage = () => {
                 <div className="max-w-sm">
                     <Image src={profilePicture} className="rounded-md" />
                 </div>
-                <div className="lg:max-w-md xl:max-w-2xl mt-12">
+                <div className="lg:max-w-md xl:max-w-2xl mt-12 lg:mt-0">
                     <h1 className="text-4xl font-extrabold text-center">About me</h1>
                     <p className="mt-4 max-w-2xl text-xl text-gray-500 text-center mx-auto">
                         {" "}
