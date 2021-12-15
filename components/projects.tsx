@@ -14,7 +14,7 @@ const posts = [
         href: "https://jobeed.herokuapp.com/home",
         category: { name: "Full-stack app", href: "#" },
         description:
-            "Jobeed was conceived as a Twitter-like app for job purposes, this app was developed with apache Velocity. This is one of my most interesting projects due to the nature of the backend " +
+            "Jobeed was conceived as a Twitter-like app for job purposes, this app was developed with apache Velocity. This is one of my most interesting projects due to the nature of the backend, " +
             "we developed the project using Domain Driven Design and hexagonal architecture being one of my best works.",
         imageUrl: "/jobeed.png",
     },
@@ -34,6 +34,14 @@ const posts = [
         imageUrl: "/hidreco.png",
     },
     {
+        title: "Roff Maxx",
+        href: "https://solar.roofmaxx.com/",
+        category: { name: "React component (Form)", href: "#" },
+        description:
+            "We rebuilt from the ground up several forms with the aim to optimize form submissions and user experience to increase user conversion. Using React and Cypress to ensure maximum quality, performance, and reusability.",
+        imageUrl: "/roofmaxx.png",
+    },
+    {
         title: "Sons of God: Redemption",
         href: "https://tonirealp.itch.io/sons-of-god-redemption",
         category: { name: "3D videogame", href: "#" },
@@ -46,7 +54,7 @@ const posts = [
         href: "https://github.com/ToniRealp/2D-game-engine",
         category: { name: "2D videogame", href: "#" },
         description:
-            "This is a simple 2D game engine with a curious version of arkanoid built inside. The idea behind this project was to showcase object oriented desing plus MVC architecture. It was built with C++ and SDL",
+            "This is a simple 2D game engine with a curious version of arkanoid built inside. The idea behind this project was to showcase object oriented desing plus MVC architecture. It was built with C++ and SDL.",
         imageUrl: "/2D-game-engine.png",
     },
     {
