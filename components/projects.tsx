@@ -65,10 +65,18 @@ const posts = [
             "2D brawler developed for my first year of university at ENTI, this project won the award as the best game in the promotion, it was developed with Unity in a team of 3.",
         imageUrl: "/jueguito-the-game.png",
     },
+    {
+        title: "Filant",
+        href: "https://chrome.google.com/webstore/detail/filant-open-web-component/eilfjabonchhnfknjldhlbedoimgdkfp",
+        category: { name: "Chrome extension", href: "#" },
+        description:
+            "Chrome extension utility for developers. Allows you to open web components in editor from the browser with a single click.",
+        imageUrl: "/filant.png",
+    },
 ];
 
 const Projects: NextPage = () => (
-    <div id="projects" className="relative pb-20 px-4 sm:px-6 lg:pb-28 lg:px-8 lg:mt-8">
+    <div id="projects" className="relative px-4 sm:px-6 lg:px-8 lg:pt-28">
         <div className="absolute inset-0">
             <div className=" h-1/3 sm:h-2/3" />
         </div>
@@ -79,7 +87,7 @@ const Projects: NextPage = () => (
                     Take a look at my projects. This is some of the work that I've been proud to take part in.
                 </p>
             </div>
-            <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+            <div className="mt-12 max-w-lg mx-auto grid gap-8 lg:grid-cols-3 lg:max-w-none">
                 {posts.map((post) => (
                     <div key={post.title} className="flex flex-col rounded-lg shadow-lg overflow-hidden">
                         <div className="flex-shrink-0">
