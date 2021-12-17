@@ -4,8 +4,8 @@ import profilePicture from "../public/profile-picture.jpg";
 
 const About: NextPage = () => {
     return (
-        <div>
-            <div id="about" className="pt-32 mx-auto w-full max-w-7xl px-4">
+        <div id="about">
+            <div className="pt-32 mx-auto w-full max-w-7xl px-4">
                 <h1 className="text-6xl font-extrabold text-center">
                     Hi I'm <span className="text-primary">Toni Realp</span>
                 </h1>

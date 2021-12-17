@@ -51,6 +51,7 @@ export default function Navbar() {
                             <div className="hidden sm:ml-6 sm:flex sm:space-x-8 items-center">
                                 <NavbarLink href="/#about">About</NavbarLink>
                                 <NavbarLink href="/#projects">My Projects</NavbarLink>
+                                <NavbarLink href="/#contact">Contact</NavbarLink>
                                 <NavbarLink
                                     href="/curriculum.pdf"
                                     className="bg-primary rounded-lg w-24 text-white hover:bg-primary-500 hover:!border-none"
@@ -83,6 +84,7 @@ export default function Navbar() {
                             <div className="space-y-1 w-full flex flex-col items-center justify-center sm:items-start sm:text-left">
                                 <NavbarLink href="/#about">About</NavbarLink>
                                 <NavbarLink href="/#projects">My projects</NavbarLink>
+                                <NavbarLink href="/#contact">Contact</NavbarLink>
                                 <NavbarLink href="/curriculum.pdf">My CV</NavbarLink>
                             </div>
                         </Disclosure.Panel>
