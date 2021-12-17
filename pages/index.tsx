@@ -3,6 +3,7 @@ import Navbar from "../components/navbar";
 import About from "../components/about";
 import Projects from "../components/projects";
 import Footer from "../components/footer";
+import ContactSection from "../components/contact";
 
 const HomePage: NextPage = () => {
     return (
@@ -10,6 +11,7 @@ const HomePage: NextPage = () => {
             <Navbar />
             <About />
             <Projects />
+            <ContactSection />
             <Footer />
         </div>
     );
