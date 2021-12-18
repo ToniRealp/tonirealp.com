@@ -5,7 +5,7 @@ const ContactSection = () => {
     if (state.succeeded) {
         return (
             <div id="contact">
-                <div className="max-w-3xl mx-auto px-4 sm:py-28 sm:px-6 lg:px-8 ">
+                <div className="max-w-3xl mx-auto px-4 py-8 sm:py-28 sm:px-6 lg:px-8 ">
                     <div className="relative bg-white rounded-lg shadow-lg">
                         <h2 className="sr-only">Get in touch</h2>
                         <div className="grid grid-cols-1 rounded-lg">
@@ -127,7 +127,7 @@ const ContactSection = () => {
     }
     return (
         <div id="contact">
-            <div className="max-w-3xl mx-auto px-4 sm:py-28 sm:px-6 lg:px-8 ">
+            <div className="max-w-3xl mx-auto py-8 px-4 sm:py-28 sm:px-6 lg:px-8 ">
                 <div className="relative bg-white rounded-lg shadow-lg">
                     <h2 className="sr-only">Get in touch</h2>
                     <div className="grid grid-cols-1 rounded-lg">

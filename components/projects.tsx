@@ -76,7 +76,7 @@ const posts = [
 ];
 
 const Projects: NextPage = () => (
-    <div id="projects" className="relative px-4 sm:px-6 lg:px-8 lg:pt-28">
+    <div id="projects" className="relative px-4 pt-8 sm:px-6 lg:px-8 lg:pt-28">
         <div className="absolute inset-0">
             <div className=" h-1/3 sm:h-2/3" />
         </div>
