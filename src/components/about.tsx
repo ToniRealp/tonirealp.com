@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import Image from "next/image";
-import profilePicture from "../public/profile-picture.jpg";
+import profilePicture from "../../public/profile-picture.jpg";
 
 const About: NextPage = () => {
     return (

@@ -3,7 +3,7 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import Link from "next/link";
 import classNames from "../utils/styles";
-import profilePictureLogo from "../public/profile-picture-logo.jpg";
+import profilePictureLogo from "../../public/profile-picture-logo.jpg";
 
 interface NavbarLinkProps {
     children: string;
