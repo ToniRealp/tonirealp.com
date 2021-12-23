@@ -1,4 +1,4 @@
-import { Project } from "../types/projects";
+import { Project } from "../types/project";
 
 const posts = [
     {
@@ -76,7 +76,7 @@ const posts = [
 ];
 
 interface ProjectsPageProps {
-    projects: [Project];
+    projects: Array<Project>;
 }
 
 const Projects = ({ projects }: ProjectsPageProps) => (

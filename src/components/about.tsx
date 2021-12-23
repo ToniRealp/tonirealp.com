@@ -1,8 +1,7 @@
-import { NextPage } from "next";
 import Image from "next/image";
 import profilePicture from "../../public/profile-picture.jpg";
 
-const About: NextPage = () => {
+const About = () => {
     return (
         <div id="about">
             <div className="pt-32 mx-auto w-full max-w-7xl px-4">
