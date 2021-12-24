@@ -18,7 +18,7 @@ const About = () => {
                             {" "}
                             Software engineer, full-stack developer{" "}
                         </p>
-                        <p className="mt-4 text-gray-600 mt-8 text-justify text-lg">
+                        <p className="mt-4 px- text-gray-600 mt-8 text-justify text-lg max-w-2xl px-4">
                             {" "}
                             I am Toni, currently a software engineer student and freelancer full-stack developer. During
                             my years of experience, I've worked in many different fields ranging from videogame
