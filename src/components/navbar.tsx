@@ -36,7 +36,14 @@ export default function Navbar({ logo, curriculum }: NavbarProps) {
     return (
         <Disclosure as="nav" className="fixed top-0 left-0 z-50 w-full sm:shadow-md bg-white">
             {({ open }) => (
-                <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+                <Transition
+                    show={true}
+                    appear={true}
+                    enter="transition-opacity duration-[1000ms]"
+                    enterFrom="opacity-0"
+                    enterTo="opacity-100"
+                    className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 delay-[1500ms]"
+                >
                     <div className="relative flex justify-between h-16">
                         <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
                             <div className="flex-shrink-0 flex items-center">
@@ -93,7 +100,7 @@ export default function Navbar({ logo, curriculum }: NavbarProps) {
                             </div>
                         </Disclosure.Panel>
                     </Transition>
-                </div>
+                </Transition>
             )}
         </Disclosure>
     );
