@@ -1,8 +1,8 @@
-import { NextPage } from "next";
-import Image from "next/image";
-import profilePicture from "../public/profile-picture.jpg";
+interface AboutProps {
+    profilePicture: string;
+}
 
-const About: NextPage = () => {
+const About = ({ profilePicture }: AboutProps) => {
     return (
         <div id="about">
             <div className="pt-32 mx-auto w-full max-w-7xl px-4">
@@ -11,7 +11,7 @@ const About: NextPage = () => {
                 </h1>
                 <div className="flex flex-col justify-center items-center lg:justify-between lg:flex-row mx-auto mt-16 lg:mt-24">
                     <div className="max-w-sm">
-                        <Image src={profilePicture} className="rounded-md" />
+                        <img src={profilePicture} className="rounded-md" />
                     </div>
                     <div className="lg:max-w-md xl:max-w-2xl mt-12 lg:mt-0">
                         <h1 className="text-4xl font-extrabold text-center">About me</h1>
@@ -19,7 +19,7 @@ const About: NextPage = () => {
                             {" "}
                             Software engineer, full-stack developer{" "}
                         </p>
-                        <p className="mt-4 text-gray-600 mt-8 text-justify text-lg">
+                        <p className="mt-4 px- text-gray-600 mt-8 text-justify text-lg max-w-2xl px-4">
                             {" "}
                             I am Toni, currently a software engineer student and freelancer full-stack developer. During
                             my years of experience, I've worked in many different fields ranging from videogame
