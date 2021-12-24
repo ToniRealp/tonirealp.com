@@ -1,7 +1,8 @@
-import Image from "next/image";
-import profilePicture from "../../public/profile-picture.jpg";
+interface AboutProps {
+    profilePicture: string;
+}
 
-const About = () => {
+const About = ({ profilePicture }: AboutProps) => {
     return (
         <div id="about">
             <div className="pt-32 mx-auto w-full max-w-7xl px-4">
@@ -10,7 +11,7 @@ const About = () => {
                 </h1>
                 <div className="flex flex-col justify-center items-center lg:justify-between lg:flex-row mx-auto mt-16 lg:mt-24">
                     <div className="max-w-sm">
-                        <Image src={profilePicture} className="rounded-md" />
+                        <img src={profilePicture} className="rounded-md" />
                     </div>
                     <div className="lg:max-w-md xl:max-w-2xl mt-12 lg:mt-0">
                         <h1 className="text-4xl font-extrabold text-center">About me</h1>

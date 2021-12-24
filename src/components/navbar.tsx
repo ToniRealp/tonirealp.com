@@ -3,7 +3,6 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import Link from "next/link";
 import classNames from "../utils/styles";
-import profilePictureLogo from "../../public/profile-picture-logo.jpg";
 
 interface NavbarLinkProps {
     children: string;
@@ -28,7 +27,12 @@ const NavbarLink = ({ children, className, href }: NavbarLinkProps) => {
     );
 };
 
-export default function Navbar() {
+interface NavbarProps {
+    logo: string;
+    curriculum: string;
+}
+
+export default function Navbar({ logo, curriculum }: NavbarProps) {
     return (
         <Disclosure as="nav" className="fixed top-0 left-0 z-50 w-full sm:shadow-md bg-white">
             {({ open }) => (
@@ -41,7 +45,7 @@ export default function Navbar() {
                                         <Image
                                             height={46}
                                             width={46}
-                                            src={profilePictureLogo}
+                                            src={logo}
                                             alt="Render Props Logo"
                                             className="object-scale-down rounded-full"
                                         />
@@ -53,7 +57,7 @@ export default function Navbar() {
                                 <NavbarLink href="/#projects">My Projects</NavbarLink>
                                 <NavbarLink href="/#contact">Contact</NavbarLink>
                                 <NavbarLink
-                                    href="/curriculum.pdf"
+                                    href={curriculum}
                                     className="bg-primary rounded-lg w-24 text-white hover:bg-primary-500 hover:!border-none"
                                 >
                                     My CV
