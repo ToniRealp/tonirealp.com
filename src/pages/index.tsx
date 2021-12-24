@@ -25,7 +25,7 @@ const HomePage: NextPage<HomePageProps> = ({ projects, profilePicture, curriculu
     );
 };
 
-export const getStaticProps: GetStaticProps<HomePageProps> = async (context) => {
+export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
     const { profilePicture, projects, curriculum } = await getMainPage();
     return {
         props: {

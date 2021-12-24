@@ -29,8 +29,6 @@ const getMainPage = async () => {
         mainPage: { profilePicture, projects, curriculum },
     } = await client.request(query);
 
-    console.log(profilePicture);
-
     return {
         profilePicture: profilePicture.url,
         projects: projects.map((project: Project) => {
