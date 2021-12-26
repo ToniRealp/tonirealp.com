@@ -96,7 +96,7 @@ export default function Navbar({ logo, curriculum }: NavbarProps) {
                                 <NavbarLink href="/#about">About</NavbarLink>
                                 <NavbarLink href="/#projects">My projects</NavbarLink>
                                 <NavbarLink href="/#contact">Contact</NavbarLink>
-                                <NavbarLink href="/curriculum.pdf">My CV</NavbarLink>
+                                <NavbarLink href={curriculum}>My CV</NavbarLink>
                             </div>
                         </Disclosure.Panel>
                     </Transition>
