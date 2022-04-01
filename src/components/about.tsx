@@ -35,8 +35,7 @@ const About = ({ profilePicture }: AboutProps) => {
                 </Transition>
                 <div className="flex flex-col justify-center items-center lg:justify-between lg:flex-row mx-auto mt-16 lg:mt-24">
                     <Transition
-                        show={true}
-                        appear={true}
+                        show={appear}
                         enter="transition-opacity duration-1000"
                         enterFrom="opacity-0"
                         enterTo="opacity-100"
@@ -45,8 +44,7 @@ const About = ({ profilePicture }: AboutProps) => {
                         <img src={profilePicture} className="rounded-md" alt="profile picture" />
                     </Transition>
                     <Transition
-                        show={true}
-                        appear={true}
+                        show={appear}
                         enter="transition-opacity duration-1000"
                         enterFrom="opacity-0"
                         enterTo="opacity-100"
