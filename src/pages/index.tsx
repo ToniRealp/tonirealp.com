@@ -6,6 +6,7 @@ import Footer from "../components/footer";
 import ContactSection from "../components/contact";
 import { Project } from "../utils/types";
 import getMainPage from "../utils/data";
+import {useState} from "react";
 
 interface HomePageProps {
     profilePicture: string;
@@ -14,12 +15,13 @@ interface HomePageProps {
 }
 
 const HomePage: NextPage<HomePageProps> = ({ projects, profilePicture, curriculum }: HomePageProps) => {
+    const[aboutHasLoaded, setAboutHasLoaded]=useState(false)
     return (
         <div className="bg-gray-50 h-full">
             <Navbar logo={profilePicture} curriculum={curriculum} />
-            <About profilePicture={profilePicture} />
-            <Projects projects={projects} />
-            <ContactSection />
+            <About profilePicture={profilePicture} setAboutHasLoaded={setAboutHasLoaded}/>
+            <Projects projects={projects} aboutHasLoaded={aboutHasLoaded} />
+            <ContactSection aboutHasLoaded={aboutHasLoaded}/>
             <Footer />
         </div>
     );

@@ -1,7 +1,7 @@
 import { useIntersection } from "react-use";
 import { MutableRefObject, useState } from "react";
 
-const useHasIntersected = (reference: MutableRefObject<any>) => {
+const useHasIntersected = (reference: MutableRefObject<any>, applicationHasLoaded:boolean) => {
     const [intersected, setIntersected] = useState(false);
     const intersection = useIntersection(reference, {
         root: null,
@@ -9,7 +9,7 @@ const useHasIntersected = (reference: MutableRefObject<any>) => {
         threshold: 1,
     });
 
-    if (intersection?.isIntersecting && !intersected) {
+    if (intersection?.isIntersecting && !intersected && applicationHasLoaded) {
         setIntersected(true);
     }
 

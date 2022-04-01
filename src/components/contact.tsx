@@ -1,7 +1,17 @@
 import { useForm } from "@formspree/react";
+import { Transition } from "@headlessui/react";
+import useHasIntersected from "../hooks/use-has-intersected";
+import {useRef} from "react";
 
-const ContactSection = () => {
+interface ContactSectionProps {
+    aboutHasLoaded: boolean
+}
+
+const ContactSection = ({aboutHasLoaded}:ContactSectionProps) => {
     const [state, handleSubmit] = useForm("mbjwjwdb");
+    const ref = useRef(null)
+    const intersected = useHasIntersected(ref, aboutHasLoaded)
+
     if (state.succeeded) {
         return (
             <div id="contact">
@@ -126,8 +136,14 @@ const ContactSection = () => {
         );
     }
     return (
-        <div id="contact">
-            <div className="max-w-3xl mx-auto py-8 px-4 sm:pb-28 sm:pt-40 sm:px-6 lg:px-8 ">
+        <div ref={ref}>
+            <Transition
+                id="contact"
+                show={intersected}
+                enter="transition-opacity duration-1000"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                className="max-w-3xl mx-auto py-8 px-4 sm:pb-28 sm:pt-40 sm:px-6 lg:px-8 ">
                 <div className="relative bg-white rounded-lg shadow-lg">
                     <h2 className="sr-only">Get in touch</h2>
                     <div className="grid grid-cols-1 rounded-lg">
@@ -302,7 +318,7 @@ const ContactSection = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Transition>
         </div>
     );
 };

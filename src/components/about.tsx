@@ -3,17 +3,19 @@ import {useEffect, useState} from "react";
 
 interface AboutProps {
     profilePicture: string;
+    setAboutHasLoaded: (state:boolean)=>void;
 }
 
-const About = ({ profilePicture }: AboutProps) => {
+const About = ({ profilePicture, setAboutHasLoaded }: AboutProps) => {
     const [appear, setAppear] = useState(false)
     useEffect(()=>{
         setAppear(true)
+        setAboutHasLoaded(true)
     },[appear])
     return (
         <div id="about">
             <div className="pt-32 mx-auto w-full max-w-7xl px-4">
-                <Transition show={appear} className="text-center">
+                <Transition show={appear} unmount className="text-center">
                     <Transition.Child
                         as="span"
                         enter="transition-opacity duration-1000"
