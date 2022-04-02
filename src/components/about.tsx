@@ -10,7 +10,6 @@ const About = ({ profilePicture, setAboutHasLoaded }: AboutProps) => {
     const [appear, setAppear] = useState(false)
     useEffect(()=>{
         setAppear(true)
-        setAboutHasLoaded(true)
     },[appear])
     return (
         <div id="about">
@@ -51,6 +50,7 @@ const About = ({ profilePicture, setAboutHasLoaded }: AboutProps) => {
                         enterFrom="opacity-0"
                         enterTo="opacity-100"
                         className="lg:max-w-md xl:max-w-2xl mt-12 lg:mt-0 delay-1500"
+                        afterEnter={()=>setAboutHasLoaded(true)}
                     >
                         <h1 className="text-4xl font-extrabold text-center">About me</h1>
                         <p className="mt-4 max-w-2xl text-xl text-gray-500 text-center mx-auto">
