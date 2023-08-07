@@ -10,16 +10,17 @@ import {useState} from "react";
 
 interface HomePageProps {
     profilePicture: string;
+    description: string;
     projects: Array<Project>;
     curriculum: string;
 }
 
-const HomePage: NextPage<HomePageProps> = ({ projects, profilePicture, curriculum }: HomePageProps) => {
+const HomePage: NextPage<HomePageProps> = ({ projects,description ,profilePicture, curriculum }: HomePageProps) => {
     const[aboutHasLoaded, setAboutHasLoaded]=useState(false)
     return (
         <div className="bg-gray-50 h-full">
             <Navbar logo={profilePicture} curriculum={curriculum} />
-            <About profilePicture={profilePicture} setAboutHasLoaded={setAboutHasLoaded}/>
+            <About profilePicture={profilePicture} description={description} setAboutHasLoaded={setAboutHasLoaded}/>
             <Projects projects={projects} aboutHasLoaded={aboutHasLoaded} />
             <ContactSection aboutHasLoaded={aboutHasLoaded}/>
             <Footer />
@@ -28,10 +29,11 @@ const HomePage: NextPage<HomePageProps> = ({ projects, profilePicture, curriculu
 };
 
 export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
-    const { profilePicture, projects, curriculum } = await getMainPage();
+    const { profilePicture, description, projects, curriculum } = await getMainPage();
     return {
         props: {
             profilePicture,
+            description,
             projects,
             curriculum,
         },

@@ -20,6 +20,7 @@
         "*.(md|json|mdx|yml)": "prettier --write"
     },
     "dependencies": {
+        "graphql": "^16.7.1",
         "graphql-request": "^3.7.0",
         "next": "12.0.7",
         "react": "17.0.2",
