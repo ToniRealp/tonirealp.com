@@ -3,10 +3,11 @@ import {useEffect, useState} from "react";
 
 interface AboutProps {
     profilePicture: string;
+    description: string;
     setAboutHasLoaded: (state:boolean)=>void;
 }
 
-const About = ({ profilePicture, setAboutHasLoaded }: AboutProps) => {
+const About = ({ profilePicture, description, setAboutHasLoaded }: AboutProps) => {
     const [appear, setAppear] = useState(false)
     useEffect(()=>{
         setAppear(true)
@@ -58,12 +59,7 @@ const About = ({ profilePicture, setAboutHasLoaded }: AboutProps) => {
                             Software engineer, full-stack developer{" "}
                         </p>
                         <p className="mt-4 px- text-gray-600 mt-8 text-justify text-lg max-w-2xl px-4">
-                            {" "}
-                            I am Toni, currently a software engineer student and freelancer full-stack developer. During
-                            my years of experience, I've worked in many different fields ranging from videogame
-                            development to full-stack programming, including an Internship at HP Inc. This upcoming year
-                            I'll be graduating from university and I'm currently looking for the next challenge to
-                            develop my software engineer career to its fullest potential.{" "}
+                            {description}
                         </p>
                     </Transition>
                 </div>
