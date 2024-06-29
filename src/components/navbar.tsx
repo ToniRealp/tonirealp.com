@@ -13,15 +13,14 @@ interface NavbarLinkProps {
 const NavbarLink = ({ children, className, href }: NavbarLinkProps) => {
     return (
         <Disclosure.Button>
-            <Link href={href}>
-                <a
-                    className={classNames(
+            <Link href={href} 
+                  className={classNames(
                         "flex justify-center items-center border-transparent h-8 text-center px-1 border-b-2 text-sm font-semibold hover:border-primary md:transition-all md:duration-300",
                         className
-                    )}
-                >
+                    )}>
+                
                     {children}
-                </a>
+               
             </Link>
         </Disclosure.Button>
     );
@@ -48,7 +47,6 @@ export default function Navbar({ logo, curriculum }: NavbarProps) {
                         <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
                             <div className="flex-shrink-0 flex items-center">
                                 <Link href="/">
-                                    <a>
                                         <Image
                                             height={46}
                                             width={46}
@@ -56,7 +54,6 @@ export default function Navbar({ logo, curriculum }: NavbarProps) {
                                             alt="Render Props Logo"
                                             className="object-scale-down rounded-full"
                                         />
-                                    </a>
                                 </Link>
                             </div>
                             <div className="hidden sm:ml-6 sm:flex sm:space-x-8 items-center">
