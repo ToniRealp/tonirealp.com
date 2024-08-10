@@ -1,6 +1,5 @@
 import { Transition } from "@headlessui/react";
 import {useEffect, useState} from "react";
-import Link from "next/link";
 
 interface AboutProps {
     profilePicture: string;
