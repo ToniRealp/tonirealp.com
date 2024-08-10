@@ -51,7 +51,7 @@ const About = ({ profilePicture, description, setAboutHasLoaded }: AboutProps) =
                         enterFrom="opacity-0"
                         enterTo="opacity-100"
                         className="lg:max-w-md xl:max-w-2xl mt-12 lg:mt-0 delay-1500"
-                        afterEnter={()=>setAboutHasLoaded(true)}
+                        afterEnter={() => setAboutHasLoaded(true)}
                     >
                         <h1 className="text-4xl font-extrabold text-center">About me</h1>
                         <p className="mt-4 max-w-2xl text-xl text-gray-500 text-center mx-auto">
@@ -60,6 +60,11 @@ const About = ({ profilePicture, description, setAboutHasLoaded }: AboutProps) =
                         </p>
                         <p className="mt-4 px- text-gray-600 mt-8 text-justify text-lg max-w-2xl px-4">
                             {description}
+                        </p>
+                        <p className="text-blue-500 text-center text-lg max-w-2xl px-4 mt-8">
+                            <a href={"https://ko-fi.com/tonirealp"}>
+                                If you enjoyed any of my projects feel free to buy me a Ko-Fi
+                            </a>
                         </p>
                     </Transition>
                 </div>
