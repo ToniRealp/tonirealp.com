@@ -56,7 +56,7 @@ const About = ({ profilePicture, description, setAboutHasLoaded }: AboutProps) =
                         <h1 className="text-4xl font-extrabold text-center">About me</h1>
                         <p className="mt-4 max-w-2xl text-xl text-gray-500 text-center mx-auto">
                             {" "}
-                            Software engineer, full-stack developer{" "}
+                            Software engineer, iOS developer{" "}
                         </p>
                         <p className="mt-4 px- text-gray-600 mt-8 text-justify text-lg max-w-2xl px-4">
                             {description}
