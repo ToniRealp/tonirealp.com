@@ -2,7 +2,7 @@ import { gql } from "graphql-request";
 import client from "../utils/graphql-client";
 import { Project } from "./types";
 
-const getMainPage = async () => {
+const getData = async () => {
     const query = gql`
       {
           mainPage(where: { id: "ckxkmvrgg1k9f0a19fhgxdjoe" }) {
@@ -46,4 +46,4 @@ const getMainPage = async () => {
     };
 };
 
-export default getMainPage;
+export default getData;
