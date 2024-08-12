@@ -29,9 +29,10 @@ const NavbarLink = ({ children, className, href }: NavbarLinkProps) => {
 interface NavbarProps {
     logo: string;
     curriculum: string;
+    transitionDelay?: number;
 }
 
-export default function Navbar({ logo, curriculum }: NavbarProps) {
+export default function Navbar({ logo, curriculum, transitionDelay = 1500 }: NavbarProps) {
     return (
         <Disclosure as="nav" className="fixed top-0 left-0 z-50 w-full sm:shadow-md bg-white">
             {({ open }) => (
@@ -42,7 +43,7 @@ export default function Navbar({ logo, curriculum }: NavbarProps) {
                         enter="transition-opacity duration-[1000ms]"
                         enterFrom="opacity-0"
                         enterTo="opacity-100"
-                        className="relative flex justify-between h-16 delay-[1500ms]"
+                        className={`relative flex justify-between h-16 delay-[${transitionDelay.toString()}ms]`}
                     >
                         <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
                             <div className="flex-shrink-0 flex items-center">
