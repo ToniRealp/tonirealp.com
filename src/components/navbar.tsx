@@ -88,7 +88,6 @@ export default function Navbar({ logo, transitionDelay = 1500 }: NavbarProps) {
                                 <NavbarLink href="/#about">About</NavbarLink>
                                 <NavbarLink href="/#projects">My projects</NavbarLink>
                                 <NavbarLink href="/#contact">Contact</NavbarLink>
-                                <NavbarLink href={curriculum}>My CV</NavbarLink>
                             </div>
                         </Disclosure.Panel>
                     </Transition>
