@@ -13,10 +13,9 @@ interface HomePageProps {
     profilePicture: string;
     description: string;
     projects: Array<Project>;
-    curriculum: string;
 }
 
-const HomePage: NextPage<HomePageProps> = ({ projects,description ,profilePicture, curriculum }: HomePageProps) => {
+const HomePage: NextPage<HomePageProps> = ({ projects,description ,profilePicture }: HomePageProps) => {
     const[aboutHasLoaded, setAboutHasLoaded]=useState(false)
     return (
         <div className="bg-gray-50 h-full">
@@ -33,7 +32,7 @@ const HomePage: NextPage<HomePageProps> = ({ projects,description ,profilePictur
                     sizes="46x64"
                 />
             </Head>
-            <Navbar logo={profilePicture} curriculum={curriculum} />
+            <Navbar logo={profilePicture} />
             <About profilePicture={profilePicture} description={description} setAboutHasLoaded={setAboutHasLoaded}/>
             <Projects projects={projects} aboutHasLoaded={aboutHasLoaded} />
             <ContactSection aboutHasLoaded={aboutHasLoaded}/>
@@ -43,13 +42,12 @@ const HomePage: NextPage<HomePageProps> = ({ projects,description ,profilePictur
 };
 
 export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
-    const { profilePicture, description, projects, curriculum } = await getMainPage();
+    const { profilePicture, description, projects } = await getMainPage();
     return {
         props: {
             profilePicture,
             description,
-            projects,
-            curriculum,
+            projects
         },
     };
 };

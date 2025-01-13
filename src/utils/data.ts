@@ -19,16 +19,13 @@ const getData = async () => {
                       url
                   }
               }
-              curriculum {
-                  url
-              }
           }
       }
     `;
 
     const {
-        mainPage: { profilePicture, description, projects, curriculum },
-    } = await client.request(query);
+        mainPage: { profilePicture, description, projects},
+    } = await client.request(query)
 
     return {
         profilePicture: profilePicture.url,
@@ -42,7 +39,6 @@ const getData = async () => {
                 url: project.url,
             };
         }),
-        curriculum: curriculum.url,
     };
 };
 

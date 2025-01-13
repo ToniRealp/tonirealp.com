@@ -28,11 +28,10 @@ const NavbarLink = ({ children, className, href }: NavbarLinkProps) => {
 
 interface NavbarProps {
     logo: string;
-    curriculum: string;
     transitionDelay?: number;
 }
 
-export default function Navbar({ logo, curriculum, transitionDelay = 1500 }: NavbarProps) {
+export default function Navbar({ logo, transitionDelay = 1500 }: NavbarProps) {
     return (
         <Disclosure as="nav" className="fixed top-0 left-0 z-50 w-full sm:shadow-md bg-white">
             {({ open }) => (
@@ -61,12 +60,7 @@ export default function Navbar({ logo, curriculum, transitionDelay = 1500 }: Nav
                                 <NavbarLink href="/#about">About</NavbarLink>
                                 <NavbarLink href="/#projects">My Projects</NavbarLink>
                                 <NavbarLink href="/#contact">Contact</NavbarLink>
-                                <NavbarLink
-                                    href={curriculum}
-                                    className="bg-primary rounded-lg w-24 text-white hover:bg-primary-500 hover:!border-none"
-                                >
-                                    My CV
-                                </NavbarLink>
+                                
                             </div>
                             <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
                                 {/* Mobile menu button */}
