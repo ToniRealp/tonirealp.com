@@ -7,15 +7,14 @@ import getData from "../../utils/data";
 
 interface PrivacyPolicyProps {
     profilePicture: string;
-    curriculum: string;
 }
 
-const PrivacyPolicy: NextPage<PrivacyPolicyProps> = ({profilePicture, curriculum}) => {
+const PrivacyPolicy: NextPage<PrivacyPolicyProps> = ({profilePicture}) => {
     const today = "2024-06-29"
 
     return (
         <div className="bg-white px-6 py-32 lg:px-8">
-            <Navbar logo={profilePicture} curriculum={curriculum} transitionDelay={200}/>
+            <Navbar logo={profilePicture} transitionDelay={200}/>
             <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700 text-justify">
                 <p className="text-base font-semibold leading-7 text-indigo-600">Privacy Policy for Inhale for
                     WatchOS</p>
@@ -75,11 +74,10 @@ const PrivacyPolicy: NextPage<PrivacyPolicyProps> = ({profilePicture, curriculum
 }
 
 export const getStaticProps: GetStaticProps<PrivacyPolicyProps> = async () => {
-    const {profilePicture, curriculum} = await getData();
+    const {profilePicture} = await getData();
     return {
         props: {
-            profilePicture,
-            curriculum,
+            profilePicture
         },
     };
 };
